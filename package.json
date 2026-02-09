@@ -1,0 +1,38 @@
+{
+    "name": "name",
+    "version": "1.0.0",
+    "description": "Description",
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sanity-test": "npm run clean-allure-results && tsc && playwright test --project=sanity-test-suite --config=config.ts",
+        "regression-test": "npm run clean-allure-results && tsc && playwright test --project=regression-test-suite --config=config.ts",
+        "sanity-pipeline": "tsc && playwright test --project=sanity-pipeline --config=config.ts",
+        "regression-pipeline": "tsc && playwright test --project=regression-pipeline --config=config.ts",
+        "allure:generate": "npx allure generate allure-results --clean --output allure-report && npm run allure-icons",
+        "allure:open": "npx allure open allure-report",
+        "allure-icons": "node ./allure-report-icons.js",
+        "allure:serve": "npx allure serve allure-results",
+        "clean-allure-results": "node -e \"const fs-require('fs'),p='allure-results';if(fs.existsSync(p)){p, recursive:true,force:true})}fs.mkdirSync(p,{recursive:true})\""
+    },
+    "author": "QA",
+    "license": "ISC",
+    "dependencies": {
+        "@playwright/mcp": "^0.0.35",
+        "@types/node": "25.2.1",
+        "allure-playwright": "3.4.5",
+        "dotenv":"^17.2.4",
+        "package.json": "^2.0.1",
+        "playwright": "1.58.2"
+    },
+    "devDependencies": {
+        "@playwright/test": "1.58.2",
+        "allure-commandline": "2.36.0",
+        "typescript": "^5.5.4"
+    },
+    "directories": {
+        "test": "tests"
+    },
+    "keywords": []
+    }
