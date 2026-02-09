@@ -1,0 +1,31 @@
+name: Playwright E2E Tests
+
+on :
+  workflow_dispatch:
+  push:
+    branches: [main]
+  schedule:
+    # 6:00 AM IST is 00:30 UTC
+    - cron: '30 0 * * *'
+
+  env:
+    tag: ${{github.run_number}}
+
+  jobs: 
+    runs-on: nbi
+    steps: 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install typescript
+      run: npm install -g typescript
+
+    - name: Install playwright browsers
+      run: npx playwright install --with-deps
+      
+    - name: Install Chrome for playwright
+      run: npx playwright install chrome
+
+      env: 
+        WEB_APP_USER: ${{ secrets.WEB_APP_USER }}
+        WEB_APP_PASS: ${{ secrets.WEB_APP_PASS }}
