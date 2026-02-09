@@ -5,9 +5,9 @@ This is a test automation framework built with playwright and typescript, implem
 - npm: Latest version
 - chrome: Latest version
 
-#Installation
+# Installation
 
-#clone the repository
+# clone the repository
 - git clone <repository-url>
 - cd automation_framework
 
