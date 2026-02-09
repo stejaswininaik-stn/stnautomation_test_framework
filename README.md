@@ -1,13 +1,13 @@
-# This is a test automation framework built with playwright and typescript, implementing page object model design pattern with allure reporting and CI/CD integration using GitHub Actions.
+This is a test automation framework built with playwright and typescript, implementing page object model design pattern with allure reporting and CI/CD integration using GitHub Actions.
 
-### Prerequisites
-- **Node.js**: v18.0.0 or higher
--- **npm**: Latest version
--- **chrome**: Latest version
+# Prerequisites
+- Node.js: v18.0.0 or higher
+- npm: Latest version
+- chrome: Latest version
 
-### Installation
+# Installation
 
-#clone the repository
+# clone the repository
 git clone <repository-url>
 cd automation_framework
 
@@ -17,9 +17,9 @@ npm install
 # Build typescript files
 npm run build
 
-## Test Execution
+# Test Execution
 
-### Local Execution (with UI)
+# Local Execution (with UI)
 
 # Sanity tests
 npm run sanity-test
@@ -27,7 +27,7 @@ npm run sanity-test
 # Regression tests
 npm run regression-test
 
-### Pipeline Execution (headless)
+# Pipeline Execution (headless)
 
 # Sanity tests for CI/CD
 npm run sanity-pipeline
