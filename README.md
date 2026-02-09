@@ -5,40 +5,35 @@ This is a test automation framework built with playwright and typescript, implem
 - npm: Latest version
 - chrome: Latest version
 
-# Installation
-
-# clone the repository
+Installation: 
+clone the repository
 - git clone <repository-url>
 - cd automation_framework
 
-Install dependencies
-npm install
+Install dependencies: 
+- npm install
 
-Build typescript files
-npm run build
+Build typescript files:
+- npm run build
 
 Test Execution
+Local Execution (with UI):
+- Sanity tests
+- npm run sanity-test
 
-Local Execution (with UI)
+- Regression tests
+- npm run regression-test
 
-Sanity tests
-npm run sanity-test
+Pipeline Execution (headless): 
+- Sanity tests for CI/CD
+- npm run sanity-pipeline
 
-Regression tests
-npm run regression-test
+- Regression tests for CI/CD
+- npm run regression-pipeline
 
-Pipeline Execution (headless)
-
-Sanity tests for CI/CD
-npm run sanity-pipeline
-
-Regression tests for CI/CD
-npm run regression-pipeline
-
-Allure Reporting
-
+Allure Reporting: 
 Generate comprehensive HTML report
-npm run allure:generate
+- npm run allure:generate
 
 Open report in browser
-npm run allure:open
+- npm run allure:open
